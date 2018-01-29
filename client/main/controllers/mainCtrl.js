@@ -1,5 +1,5 @@
 angular.module("smartLibrary")
-    .controller('MainCtrl', function($scope,$state,$stateParams,$ionicModal,$meteor,$cordovaCamera) {
+    .controller('mainCtrl', function($scope,$state,$stateParams,$ionicModal,$meteor,$cordovaCamera) {
         $scope.posts = $meteor.collection(Posts);
 
         $scope.newPost={};
