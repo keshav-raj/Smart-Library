@@ -78,7 +78,7 @@ angular.module("smartLibrary")
                 url: '/bookDetail',
                 templateUrl: 'client/main/views/bookDetail.ng.html',
                 controller: 'bookDetailCtrl'
-            
+
               });
 
 
