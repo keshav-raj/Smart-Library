@@ -4,7 +4,8 @@ angular.module('smartLibrary')
   $scope.login = function(UserDetails) {
     var emailVar = UserDetails.email;
     var passwordVar = UserDetails.password;
-    
+    console.log(UserDetails);
+
     Meteor.loginWithPassword(emailVar, passwordVar, function(err){
           if(!err){
             $state.go('tabsController.studLibrary');

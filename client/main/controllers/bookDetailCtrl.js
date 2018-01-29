@@ -1,6 +1,6 @@
 angular.module('smartLibrary')
 
-  .controller('bookDetailsCtrl', function($scope, $state, $meteor, $stateParams) {
+  .controller('bookDetailCtrl', function($scope, $state, $meteor, $stateParams) {
 
   $scope.credentials = {};
 
