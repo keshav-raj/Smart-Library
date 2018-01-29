@@ -74,7 +74,7 @@ angular.module("smartLibrary")
 
             });
 
-            $stateProvider.state('bookDetail', {
+            $stateProvider.state('tabsController.bookDetail()', {
                 url: '/bookDetail',
                 templateUrl: 'client/main/views/bookDetail.ng.html',
                 controller: 'bookDetailCtrl'
