@@ -11,7 +11,7 @@ angular.module("smartLibrary")
         $stateProvider.state('main', {
                 url: '/main',
                 templateUrl: 'client/main/views/main.ng.html',
-                controller: 'MainCtrl',
+                controller: 'mainCtrl',
                 resolve:{
                   "currentUser": function($meteor) {
                     return $meteor.requireUser();
@@ -57,7 +57,7 @@ angular.module("smartLibrary")
                 }
             });
 
-      $stateProvider.state('tabsController.cloudTabDefaultPage', {
+      $stateProvider.state('tabsController.myProfile', {
               url: '/page4',
               views: {
                 'tab3': {
@@ -69,22 +69,16 @@ angular.module("smartLibrary")
 
           $stateProvider.state('tabsController.myBookDetails', {
               url: '/page17',
-              views: {
-                'tab1': {
-                  templateUrl: 'client/main/views/myBookDetails.ng.html',
-                  controller: 'myBookDetailsCtrl'
-                }
-              }
+              templateUrl: 'client/main/views/myBookDetails.ng.html',
+              controller: 'myBookDetailsCtrl'
+
             });
 
             $stateProvider.state('bookDetail', {
                 url: '/bookDetail',
-                views: {
-                  'tab1': {
-                    templateUrl: 'client/main/views/bookDetail.ng.html',
-                    controller: 'bookDetailCtrl'
-                  }
-                }
+                templateUrl: 'client/main/views/bookDetail.ng.html',
+                controller: 'bookDetailCtrl'
+            
               });
 
 
