@@ -67,15 +67,25 @@ angular.module("smartLibrary")
               }
           });
 
-          $stateProvider.state('tabsController.bookDetails', {
+          $stateProvider.state('tabsController.myBookDetails', {
               url: '/page17',
               views: {
                 'tab1': {
-                  templateUrl: 'client/main/views/bookDetails.ng.html',
-                  controller: 'bookDetailsCtrl'
+                  templateUrl: 'client/main/views/myBookDetails.ng.html',
+                  controller: 'myBookDetailsCtrl'
                 }
               }
             });
+
+            $stateProvider.state('bookDetail', {
+                url: '/bookDetail',
+                views: {
+                  'tab1': {
+                    templateUrl: 'client/main/views/bookDetail.ng.html',
+                    controller: 'bookDetailCtrl'
+                  }
+                }
+              });
 
 
       });
