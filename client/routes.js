@@ -51,7 +51,8 @@ angular.module("smartLibrary")
                 url: '/page3',
                 views: {
                   'tab2': {
-                    templateUrl: 'client/main/views/borrowedBooks.ng.html',
+                    template: `<p>hi</p>`
+                  //  templateUrl: 'client/main/views/borrowedBooks.ng.html',
                     controller: 'borrowedBooksCtrl'
                   }
                 }
