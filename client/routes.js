@@ -80,7 +80,7 @@ angular.module("smartLibrary")
           $stateProvider.state('tabsController.detailsOfBook', {
                 url: '/detailsOfBook',
                 views: {
-                  'tab1': {
+                  'tab2': {
                     templateUrl: 'client/main/views/detailsOfBook.ng.html',
                     controller: 'detailsOfBookCtrl'
                   }
