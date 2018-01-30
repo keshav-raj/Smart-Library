@@ -75,17 +75,24 @@ angular.module("smartLibrary")
                     controller: 'myBookDetailsCtrl'
                   }
                 }
-              })
+              });
 
           $stateProvider.state('tabsController.detailsOfBook', {
                 url: '/detailsOfBook',
                 views: {
-                  'tab2': {
+                  'tab1': {
                     templateUrl: 'client/main/views/detailsOfBook.ng.html',
                     controller: 'detailsOfBookCtrl'
                   }
                 }
-              })
+              });
+
+
+         $stateProvider.state('addBooks', {
+                url:'/addBooks',
+                templateUrl:'client/main/views/addBooks.ng.html',
+                controller:'addBooksCtrl'
+              });
 
 
 

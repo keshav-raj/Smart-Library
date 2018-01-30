@@ -6,10 +6,29 @@
         <input type="search" placeholder="search here">
       </label>
     </form>
-    <ion-list id="studLibrary-list15">
-      <ion-item class="item-thumbnail-left" id="studLibrary-list-item14" ui-sref="tabsController.detailsOfBook()">
-        <h2>Item</h2>
-      </ion-item>
-    </ion-list>
+    <div class="jumbotron" style="border-radius=99px" ng-repeat="Book in Books" ui-sref="tabsController.detailsOfBook()">
+      <div class="row">
+        <div class="col-sm-1 col-md-1 " style="margin=0px">
+
+               <img width="100px" height="100px" src="img/UMJ9Um8QS3OO3RwQrQ9Y_blue-and-white-background-free-vector-1531.jpg">
+
+        </div>
+        <div class="col-sm-11 col-md-11">
+          <p width="100%">{{Book.Name}}</p>
+          <br>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+              <p>BookId:<b>{{Book.Id}}</b> </p>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+        <p>AuthorName:<b>{{Book.AuthorName}}</b> </p>
+      </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
