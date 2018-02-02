@@ -6,7 +6,7 @@
         <input type="search" placeholder="search here">
       </label>
     </form>
-    <div class="jumbotron" style="border-radius=99px" ng-repeat="Book in Books" ui-sref="tabsController.detailsOfBook()">
+    <div class="jumbotron" style="border-radius=99px" ng-repeat="Book in Books" >
       <div class="row">
         <div class="col-sm-1 col-md-1 " style="margin=0px">
 
@@ -14,7 +14,7 @@
 
         </div>
         <div class="col-sm-11 col-md-11">
-          <p width="100%">{{Book.Name}}</p>
+          <a ui-sref="tabsController.detailsOfBook({bookId: Book._id})">{{Book.Name}}</a>
           <br>
       </div>
       </div>

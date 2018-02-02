@@ -5,7 +5,10 @@ angular.module('smartLibrary')
   $scope.credentials = {};
   $scope.helpers({
   Books: function(){
-    return Books.find();
+
+
+    return Books.find()
+
   },
   checkUser: function(){
     //check wheather user is logged in
