@@ -1,16 +1,26 @@
 <ion-view title="Book Borrowed" hide-nav-bar="false" id="page9">
   <ion-content padding="true" style="background: url(img/Dp8qFChWRcmDmyi1rLkr_money-2696229_1920.jpg) no-repeat center;background-size:cover;" class="has-header">
-    <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
-      <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
-    </div>
-    <ion-list id="bookBorrowed-list10">
-      <ion-item id="bookBorrowed-list-item23">Item 1</ion-item>
-      <ion-item id="bookBorrowed-list-item24">Item 2</ion-item>
-      <ion-item id="bookBorrowed-list-item25">Item 3</ion-item>
-    </ion-list>
-    <div id="bookBorrowed-button-bar1" class="button-bar">
-      <button id="bookBorrowed-button20" class="button button-positive button-block icon ion-android-done-all"> Approve </button>
-      <a ui-sref="tabsController.borrowingBooks()" id="bookBorrowed-button21" class="button button-positive button-block icon ion-ios-close-outline"> Deny</a>
-    </div>
+    <form id="studLibrary-form3" class="list">
+      <label class="item item-input" id="studLibrary-search1">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="search here">
+      </label>
+    </form>
+    <div class="card card-inverse card-primary mb-3" >
+  <h3 class="card-header">{{Book.Name}}</h3>
+  <div class="card-block">
+     <div class="row">
+       <div class="col-md-1 col-sm-1">
+         <img height="200px" width="200px" class="img-thumbnail"  src="img/bookParticles.jpg">
+       </div>
+       <div class="col-md-11 col-sm-11">
+         <h4 class="card-title">BookId: <b>{{Book.Id}}</b></h4>
+    <p class="card-text">Author: <b>{{Book.AuthorName}}</b></p>
+    <a href="#" class="btn btn-primary  btn-lg" ui-sref="tabsController.detailsOfBook({bookId: Book._id})" >View Book</a>
+       </div>
+     </div>
+  </div>
+</div>
+
   </ion-content>
 </ion-view>

@@ -1,7 +1,7 @@
 angular.module("smartLibrary")
     .config(function($stateProvider, $urlRouterProvider) {
       // For any unmatched url, send to /login
-        $urlRouterProvider.otherwise("/login");
+      //  $urlRouterProvider.otherwise("/login");
         $stateProvider.state('login', {
                 url: '/login',
                 // loaded into ui-view of parent's template
@@ -32,7 +32,7 @@ angular.module("smartLibrary")
             });
 
         $stateProvider.state('tabsController', {
-                url: '/page1',
+                url: '/tab',
                 templateUrl: 'client/main/views/tabsController.ng.html',
                 abstract:true
             });
@@ -94,8 +94,8 @@ angular.module("smartLibrary")
                 controller:'addBooksCtrl'
               });
 
-          $stateProvider.state('tabsController.adminHome', {
-      url: '/page11',
+          $stateProvider.state('admintabsController.adminHome', {
+      url: '/adminHome',
       views: {
         'tab4': {
           templateUrl: 'client/main/views/adminHome.ng.html',
@@ -125,7 +125,7 @@ angular.module("smartLibrary")
       })
 
       $stateProvider.state('adminTabsController', {
-      url: '/page1',
+      url: '/adminTab',
       templateUrl: 'client/main/views/adminTabsController.ng.html',
       abstract:true
       })
@@ -170,7 +170,7 @@ angular.module("smartLibrary")
       }
       })
 
-      $stateProvider.state('adminTabsController.bookBorrowed', {
+      $stateProvider.state('adminTabsController.bookDetailBorrowed', {
       url: '/bookBorrowed',
       views: {
         'tab4': {
@@ -180,12 +180,12 @@ angular.module("smartLibrary")
       }
       })
 
-      $stateProvider.state('adminTabsController.boookReturned', {
+      $stateProvider.state('adminTabsController.bookDetailReturned', {
       url: '/page10',
       views: {
         'tab4': {
-          templateUrl: 'client/main/views/boookReturned.ng.html',
-          controller: 'boookReturnedCtrl'
+          templateUrl: 'client/main/views/bookReturned.ng.html',
+          controller: 'bookReturnedCtrl'
         }
       }
       })

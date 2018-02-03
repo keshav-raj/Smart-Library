@@ -1,14 +1,33 @@
 <ion-view title="Update book" hide-nav-bar="false" id="page6">
   <ion-content padding="true" style="background: url(img/oKI9vMo6RWJaRZhFaYUx_literature-3033196.jpg) no-repeat center;background-size:cover;" class="has-header">
-    <ion-list id="updateBook-list7">
-      <ion-item class="item-thumbnail-left" id="updateBook-list-item13">
-        <h2>Name</h2>
-      </ion-item>
-      <ion-item id="updateBook-list-item14">Book id</ion-item>
-      <ion-item id="updateBook-list-item15">Authour</ion-item>
-      <ion-item id="updateBook-list-item17">Department</ion-item>
-      <ion-item id="updateBook-list-item16">Availability</ion-item>
-    </ion-list>
-    <button id="updateBook-button14" class="button button-positive button-block icon ion-android-upload"> Update</button>
+    <ion-card>
+  <img class="img-thumbnail"  src="img/Teady.jpg">
+  <ion-card-content>
+    <div style="font-size:15px;">
+      <form id="addBooks-form2" class="list">
+        <label class="item item-input" id="addBooks-input3">
+          <span class="input-label">Book Name</span>
+          <input type="text" placeholder="" ng-model="bookDetails.name">
+        </label>
+        <label class="item item-input" id="addBooks-input5">
+          <span class="input-label">Book id</span>
+          <input type="number" placeholder="" ng-model="bookDetails.id">
+        </label>
+        <label class="item item-input" id="addBooks-input7">
+          <span class="input-label">Author</span>
+          <input type="text" placeholder="" ng-model="bookDetails.authorName">
+        </label>
+        <label class="item item-input" id="addBooks-input6">
+          <span class="input-label">Department</span>
+          <input type="text" placeholder="" ng-model="bookDetails.department">
+        </label>
+      </form>
+          <button id="updateBook-button14" style="border-radius:17px 17px 17px 17px" class="button button-positive button-block icon ion-android-upload"> Update</button>
+        <button ui-sref="adminTabsController.adminLibrary()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-close"> Cancel</button>
+      </div>
+          </ion-card-content>
+        </ion-card>
+
+
   </ion-content>
 </ion-view>

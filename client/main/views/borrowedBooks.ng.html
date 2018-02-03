@@ -1,5 +1,5 @@
-<ion-view title="MyLibrary" hide-nav-bar="false" id="page3">
-  <ion-content padding="true" style="background: url(img/pen.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+<ion-view title="My Library" hide-nav-bar="false" id="page3">
+  <ion-content padding="true"  class="manual-ios-statusbar-padding">
     <form id="studLibrary-form3" class="list">
       <label class="item item-input" id="studLibrary-search1">
         <i class="icon ion-search placeholder-icon"></i>
@@ -7,17 +7,17 @@
       </label>
     </form>
 
-    <div class="card card-inverse card-primary mb-3 " ng-repeat="Book in Books">
+    <div class="card card-inverse card-primary mb-3" ng-repeat="Book in Books">
   <h3 class="card-header">{{Book.Name}}</h3>
   <div class="card-block">
      <div class="row">
        <div class="col-md-1 col-sm-1" >
-         <img class="img-thumbnail"  src="img/Teady.jpg">
+         <img width="200px" height="200px" class="img-thumbnail "   src="img/Teady.jpg">
        </div>
        <div class="col-md-9 col-sm-9">
          <h4 class="card-title">BookId: <b>{{Book.Id}}</b></h4>
     <p class="card-text">Author: <b>{{Book.AuthorName}}</b></p>
-    <a href="#" class="btn btn-primary" ui-sref="tabsController.myBookDetails()" >View Book</a>
+    <a href="#" class="btn btn-primary  btn-lg" ui-sref="tabsController.myBookDetails()" >View Book</a>
        </div>
      </div>
   </div>
