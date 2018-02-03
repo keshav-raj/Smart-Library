@@ -4,7 +4,7 @@ angular.module('smartLibrary')
 
     $scope.logout = function(){
       $meteor.logout();
-      $state.go("login");
+      $state.go("firstPage");
     };
 
 });

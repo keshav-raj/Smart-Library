@@ -94,6 +94,102 @@ angular.module("smartLibrary")
                 controller:'addBooksCtrl'
               });
 
+          $stateProvider.state('tabsController.adminHome', {
+      url: '/page11',
+      views: {
+        'tab4': {
+          templateUrl: 'client/main/views/adminHome.ng.html',
+          controller: 'adminHomeCtrl'
+        }
+      }
+    })
+
+          $stateProvider.state('adminTabsController.adminLibrary', {
+      url: '/adminLibrary',
+      views: {
+        'tab1': {
+          templateUrl: 'client/main/views/adminLibrary.ng.html',
+          controller: 'adminLibraryCtrl'
+        }
+      }
+      })
+
+      $stateProvider.state('adminTabsController.adminProfile', {
+      url: '/adminProfile',
+      views: {
+        'tab3': {
+          templateUrl: 'client/main/views/adminProfile.ng.html',
+          controller: 'adminProfileCtrl'
+        }
+      }
+      })
+
+      $stateProvider.state('adminTabsController', {
+      url: '/page1',
+      templateUrl: 'client/main/views/adminTabsController.ng.html',
+      abstract:true
+      })
+
+      $stateProvider.state('adminTabsController.addBooks', {
+      url: '/addbooks',
+      views: {
+        'tab1': {
+          templateUrl: 'client/main/views/addBooks.ng.html',
+          controller: 'addBooksCtrl'
+        }
+      }
+      })
+
+      $stateProvider.state('adminTabsController.updateBook', {
+      url: '/updateBook',
+      views: {
+        'tab1': {
+          templateUrl: 'client/main/views/updateBook.ng.html',
+          controller: 'updateBookCtrl'
+        }
+      }
+      })
+
+      $stateProvider.state('adminTabsController.borrowingBooks', {
+      url: '/page7',
+      views: {
+        'tab4': {
+          templateUrl: 'client/main/views/borrowingBooks.ng.html',
+          controller: 'borrowingBooksCtrl'
+        }
+      }
+      })
+
+      $stateProvider.state('adminTabsController.returnedBooks', {
+      url: '/returnedBooks',
+      views: {
+        'tab4': {
+          templateUrl: 'client/main/views/returnedBooks.ng.html',
+          controller: 'returnedBooksCtrl'
+        }
+      }
+      })
+
+      $stateProvider.state('adminTabsController.bookBorrowed', {
+      url: '/bookBorrowed',
+      views: {
+        'tab4': {
+          templateUrl: 'client/main/views/bookBorrowed.ng.html',
+          controller: 'bookBorrowedCtrl'
+        }
+      }
+      })
+
+      $stateProvider.state('adminTabsController.boookReturned', {
+      url: '/page10',
+      views: {
+        'tab4': {
+          templateUrl: 'client/main/views/boookReturned.ng.html',
+          controller: 'boookReturnedCtrl'
+        }
+      }
+      })
+
 
 
       });

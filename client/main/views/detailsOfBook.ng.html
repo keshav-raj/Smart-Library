@@ -1,6 +1,6 @@
-<ion-view title="Book-Details" id="page20">
+<ion-view title="Book-Details" hide-nav-bar="false" id="page20">
   <ion-content padding="true" class="has-header">
-  <div class="jumbotron">
+  <!-- <div class="jumbotron">
     <div class="row">
       <div class="col-md-12 col-sm-12 align-content-center">
         <img class="center-block"  width="300px" height="300px" src="img/UMJ9Um8QS3OO3RwQrQ9Y_blue-and-white-background-free-vector-1531.jpg" alt="image">
@@ -29,7 +29,25 @@
     </div>
   </div>
     <div class="spacer" style="width: 300px; height: 75px;"></div>
-    <div id="bookDetails2-button-bar16" class="button-bar"></div>
+    <div id="bookDetails2-button-bar16" class="button-bar"></div> -->
+    <ion-card>
+  <img class="img-thumbnail"  src="img/Teady.jpg">
+  <ion-card-content>
+    <div style="font-size:15px;">
+      <ul class="list-group">
+            <li class="list-group-item">  <h2><b>{{book.Name}}</b></h2></li>
+            <li class="list-group-item">  <p>Book-Id: <b>{{book.Id}}</b></p></li>
+            <li class="list-group-item"><p>Author-Name: <b>{{book.AuthorName}}</b></p></li>
+            <li class="list-group-item"><p>Department: <b>{{book.Department}}</b></p></li>
+            <li class="list-group-item"><p class="display-6 ">Availability: <b>{{book.Availability}}</b></p></li>
+
+        </ul>
+        <button id="bookDetails2-button36" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-cart"> TakeBook</button>
+        <button ng-click="borrow(book.Id)" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-close"> WishList </button>
+        <button ui-sref="tabsController.studLibrary()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-heart"> Cancel</button>
+      </div>
+          </ion-card-content>
+        </ion-card>
 
   </ion-content>
 </ion-view>

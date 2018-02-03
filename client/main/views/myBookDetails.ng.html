@@ -1,6 +1,6 @@
-<ion-view title="book details" hide-nav-bar="true" id="page12">
-  <ion-content padding="true" style="background: url(img/sujE5cGGQtiLaKHm0OZ1_blue-and-white-background-free-vector-1531.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
-    <div id="bookDetails-button-bar1" class="button-bar"></div>
+<ion-view title="BookDetails" hide-nav-bar="false" id="page12">
+  <ion-content padding="true" style="background: url(img/bookItems.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+    <!-- <div id="bookDetails-button-bar1" class="button-bar"></div>
     <div id="bookDetails-button-bar2" class="button-bar"></div>
     <div class="spacer" style="width: 300px; height: 8px;"></div>
     <ion-list id="bookDetails-list11">
@@ -23,9 +23,24 @@
         <strong>markdown</strong>
       </p>
     </div>
-    <div class="spacer" style="width: 300px; height: 73px;"></div>
-    <button id="bookDetails-button15" style="border-radius:20px 20px 20px 20px;" class="button button-balanced button-block icon ion-ios-book-outline"> Return</button>
-    <a ui-sref="tabsController.borrowedBooks()" id="bookDetails-button17" style="border-radius:20px 20px 20px 20px;" class="button button-assertive button-block icon ion-ios-close"> Cancel</a>
+    <div class="spacer" style="width: 300px; height: 73px;"></div> -->
+    <ion-card>
+  <img class="img-thumbnail"  src="img/Teady.jpg">
+  <ion-card-content>
+    <div style="font-size:15px;">
+      <ul class="list-group">
+            <li class="list-group-item">  <h2><b>book.Name</b></h2></li>
+            <li class="list-group-item">  <p>Book-Id: <b>book.Id</b></p></li>
+            <li class="list-group-item"><p>Expire on <b>20/2/18</b></p></li>
+            <li class="list-group-item"><p>You have 18 days more</p></li>
+
+        </ul>
+      </div>
+          </ion-card-content>
+        </ion-card>
+
+    <button id="bookDetails-button15" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-ios-book-outline"> Return</button>
+    <a ui-sref="tabsController.borrowedBooks()" id="bookDetails-button17" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-ios-close"> Cancel</a>
     <button id="bookDetails-button16" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-android-add-circle"> Extend</button>
   </ion-content>
 </ion-view>

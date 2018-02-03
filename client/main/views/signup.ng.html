@@ -1,31 +1,50 @@
-<ion-view title="Signup" id="page7">
-  <ion-content padding="true" style="background: url(img/9lbCzYrRuC2iwbGT0LXI_aaron-burden-123584.jpg) no-repeat center;background-size:cover;" class="has-header">
-    <form id="signup-form1" class="list">
-      <div class="spacer" style="width: 300px; height: 29.9961px;"></div>
-      <ion-list id="signup-list6">
-        <label class="item item-input" id="signup-input4">
-          <span class="input-label">Register no</span>
-          <input type="number" placeholder="" ng-model="UserDetails.rollNo">
-        </label>
-        <label class="item item-input" id="signup-input6">
-          <span class="input-label">Name</span>
-          <input type="text" placeholder="" ng-model="UserDetails.name">
-        </label>
-        <label class="item item-input" id="signup-input2">
-          <span class="input-label">Email</span>
-          <input type="email" placeholder="" ng-model="UserDetails.email">
-        </label>
-        <label class="item item-input" id="signup-input3">
-          <span class="input-label">Password</span>
-          <input type="password" placeholder="" ng-model="UserDetails.password">
-        </label>
-        <label class="item item-input" id="signup-input5">
-          <span class="input-label">mobile no</span>
-          <input type="tel" placeholder="" ng-model="UserDetails.mobileNo">
-        </label>
-      </ion-list>
-      <div class="spacer" style="width: 300px; height: 158.996px;"></div>
-      <button ng-click="createUser(UserDetails)" class="button button-balanced button-block">Sign up</button >
-    </form>
+<ion-view title="Signup" hide-nav-bar="true" id="page7">
+  <ion-content padding="true" style="background: url(img/pen.jpg) no-repeat center;background-size:cover;" >
+    <div class="card card-block py-5">
+
+          <form>
+              <div class="form-group">
+                  <div class="input-group input-group-lg pl-3">
+                     <span class="input-group-addon bg-primary text-white">
+                         <i class="fa fa-user" > </i>
+                     </span>
+                      <input type="text" class="form-control bg-inverse " ng-model="UserDetails.name" placeholder="Name">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="input-group input-group-lg pl-3">
+                     <span class="input-group-addon bg-primary text-white">
+                         <i class="fa fa-id-card"> </i>
+                     </span>
+                      <input type="number" class="form-control bg-inverse " ng-model="UserDetails.rollNo" placeholder="Id">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="input-group input-group-lg pl-3">
+                     <span class="input-group-addon bg-primary text-white">
+                         <i class="fa fa-envelope"> </i>
+                     </span>
+                      <input type="Email" class="form-control bg-inverse " ng-model="UserDetails.email" placeholder="@Email">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="input-group input-group-lg pl-3">
+                     <span class="input-group-addon bg-primary text-white">
+                         <i class="fa fa-key"> </i>
+                     </span>
+                      <input type="password" class="form-control bg-inverse " ng-model="UserDetails.password" placeholder="Password">
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="input-group input-group-lg pl-3">
+                     <span class="input-group-addon bg-primary text-white">
+                         <i class="fa fa-mobile"> </i>
+                     </span>
+                      <input type="tel" class="form-control bg-inverse " ng-model="UserDetails.mobileNo" placeholder="mobileNo">
+                  </div>
+              </div>
+          </form>
+          <button ng-click="createUser(UserDetails)" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-log-in"> Sign up</button >
+  </div>
   </ion-content>
 </ion-view>
