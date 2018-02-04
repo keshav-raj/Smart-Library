@@ -1,7 +1,7 @@
 angular.module("smartLibrary")
     .config(function($stateProvider, $urlRouterProvider) {
       // For any unmatched url, send to /login
-      //  $urlRouterProvider.otherwise("/login");
+      $urlRouterProvider.otherwise("/firstPage");
         $stateProvider.state('login', {
                 url: '/login',
                 // loaded into ui-view of parent's template
@@ -114,14 +114,10 @@ angular.module("smartLibrary")
       }
       })
 
-      $stateProvider.state('adminTabsController.adminProfile', {
+      $stateProvider.state('adminProfile', {
       url: '/adminProfile',
-      views: {
-        'tab3': {
           templateUrl: 'client/main/views/adminProfile.ng.html',
           controller: 'adminProfileCtrl'
-        }
-      }
       })
 
       $stateProvider.state('adminTabsController', {
@@ -161,9 +157,9 @@ angular.module("smartLibrary")
       })
 
       $stateProvider.state('adminTabsController.returnedBooks', {
-      url: '/returnedBooks',
+      url: '/page8',
       views: {
-        'tab4': {
+        'tab3': {
           templateUrl: 'client/main/views/returnedBooks.ng.html',
           controller: 'returnedBooksCtrl'
         }
@@ -171,7 +167,7 @@ angular.module("smartLibrary")
       })
 
       $stateProvider.state('adminTabsController.bookDetailBorrowed', {
-      url: '/bookBorrowed',
+      url: '/bookBorrowed/:bookId',
       views: {
         'tab4': {
           templateUrl: 'client/main/views/bookBorrowed.ng.html',
@@ -183,7 +179,7 @@ angular.module("smartLibrary")
       $stateProvider.state('adminTabsController.bookDetailReturned', {
       url: '/page10',
       views: {
-        'tab4': {
+        'tab3': {
           templateUrl: 'client/main/views/bookReturned.ng.html',
           controller: 'bookReturnedCtrl'
         }

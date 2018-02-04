@@ -1,9 +1,19 @@
 <ion-view title="Borrowing Books" hide-nav-bar="false" id="page7">
   <ion-content padding="true" style="background: url(img/E4nNRZrOTMCD1eCES6Me_coffee-2306471_1920.jpg) no-repeat center;background-size:cover;" class="has-header">
-    <ion-list id="borrowingBooks-list8">
-      <ion-item class="item-thumbnail-left" id="borrowingBooks-list-item18" ui-sref="tabsController.bookBorrowed()">
-        <h2>Item</h2>
-      </ion-item>
-    </ion-list>
+    <div class="card card-inverse card-primary mb-3"  ng-repeat="Book in borrowedBooks">
+  <h3 class="card-header">{{Book.name}}</h3>
+  <div class="card-block">
+     <div class="row">
+       <div class="col-md-1 col-sm-1">
+         <img height="200px" width="200px" class="img-thumbnail"  src="img/bookParticles.jpg">
+       </div>
+       <div class="col-md-11 col-sm-11">
+         <h4 class="card-title">BookId: {{ Book.bookid }}</h4>
+    <p class="card-text">Author: <b>{{Book.author}}</b></p>
+    <a href="#" class="btn btn-primary  btn-lg" ui-sref="adminTabsController.bookDetailBorrowed({bookId: Book._id})" >View Book</a>
+       </div>
+     </div>
+  </div>
+</div>
   </ion-content>
 </ion-view>

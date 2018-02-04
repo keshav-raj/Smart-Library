@@ -24,7 +24,7 @@ angular.module('smartLibrary')
       userId:userId,
       userName:userDetails.profile.name,
       rollNo:userDetails.profile.rollNo,
-      approved:false
+      approved:false,
     }
 
     BorrowedBooks.insert(borrowBook);

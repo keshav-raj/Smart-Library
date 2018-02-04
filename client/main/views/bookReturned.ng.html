@@ -1,16 +1,22 @@
 <ion-view title="Boook Returned" hide-nav-bar="false" id="page10">
   <ion-content padding="true" style="background: url(img/DhgTbHcWSR1kAxuuRe6U_money-2696229_1920.jpg) no-repeat center;background-size:cover;" class="has-header">
-    <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
-      <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
-    </div>
-    <ion-list id="boookReturned-list11">
-      <ion-item id="boookReturned-list-item29">Item 1</ion-item>
-      <ion-item id="boookReturned-list-item30">Item 2</ion-item>
-      <ion-item id="boookReturned-list-item31">Item 3</ion-item>
-    </ion-list>
-    <div id="boookReturned-button-bar2" class="button-bar">
-      <button id="boookReturned-button26" class="button button-positive button-block icon ion-android-done-all"> Approve</button>
-      <a ui-sref="tabsController.returnedBooks()" id="boookReturned-button27" class="button button-positive button-block icon ion-ios-close-outline"> Deny</a>
-    </div>
+    <ion-card>
+  <img class="img-thumbnail"  src="img/Teady.jpg">
+  <ion-card-content>
+    <div style="font-size:15px;">
+      <ul class="list-group">
+            <li class="list-group-item">  <h2><b>{{book.name}}</b></h2></li>
+            <li class="list-group-item">  <p>Book-Id: <b>{{book.bookid}}</b></p></li>
+            <li class="list-group-item"><p>User-Name: <b>{{book.author}</b></p></li>
+            <li class="list-group-item"><p>User-Id: <b>{{book.department}}</b></p></li>
+            <li class="list-group-item"><p>Borrowed at: <b>date</b></p></li>
+
+
+        </ul>
+        <button ng-click="borrow(book.Id)" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-android-done-all"> Approve </button>
+        <button ui-sref="adminTabsController.returnedBooks()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-close"> Deny</button>
+      </div>
+          </ion-card-content>
+        </ion-card>
   </ion-content>
 </ion-view>
