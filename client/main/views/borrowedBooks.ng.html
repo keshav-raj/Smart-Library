@@ -1,23 +1,16 @@
 <ion-view title="My Library" hide-nav-bar="false" id="page3">
   <ion-content padding="true"  class="manual-ios-statusbar-padding">
-    <form id="studLibrary-form3" class="list">
-      <label class="item item-input" id="studLibrary-search1">
-        <i class="icon ion-search placeholder-icon"></i>
-        <input type="search" placeholder="search here">
-      </label>
-    </form>
-
-    <div class="card card-inverse card-primary mb-3" ng-repeat="Book in Books">
-  <h3 class="card-header">{{Book.Name}}</h3>
+    <div class="card card-inverse card-primary mb-3"  ng-repeat="Book in Books">
+  <h3 class="card-header">{{Book.name}}</h3>
   <div class="card-block">
      <div class="row">
-       <div class="col-md-1 col-sm-1" >
-         <img width="200px" height="200px" class="img-thumbnail "   src="img/Teady.jpg">
+       <div class="col-md-1 col-sm-1">
+         <img height="200px" width="200px" class="img-thumbnail"  src="img/bookParticles.jpg">
        </div>
-       <div class="col-md-9 col-sm-9">
-         <h4 class="card-title">BookId: <b>{{Book.Id}}</b></h4>
-    <p class="card-text">Author: <b>{{Book.AuthorName}}</b></p>
-    <a href="#" class="btn btn-primary  btn-lg" ui-sref="tabsController.myBookDetails()" >View Book</a>
+       <div class="col-md-11 col-sm-11">
+         <h4 class="card-title">BookId: {{ Book.bookId }}</h4>
+    <p class="card-text">Author: <b>{{Book.author}}</b></p>
+    <a href="#" class="btn btn-primary  btn-lg" ui-sref="tabsController.myBookDetails({bookid: Book._id})" >View Book</a>
        </div>
      </div>
   </div>

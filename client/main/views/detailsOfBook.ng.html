@@ -6,15 +6,15 @@
   <ion-card-content>
     <div style="font-size:15px;">
       <ul class="list-group">
-            <li class="list-group-item">  <h2><b>{{book.Name}}</b></h2></li>
-            <li class="list-group-item">  <p>Book-Id: <b>{{book.Id}}</b></p></li>
-            <li class="list-group-item"><p>Author-Name: <b>{{book.AuthorName}}</b></p></li>
-            <li class="list-group-item"><p>Department: <b>{{book.Department}}</b></p></li>
-            <li class="list-group-item"><p class="display-6 ">Availability: <b>{{book.Availability}}</b></p></li>
+            <li class="list-group-item">  <h2><b>{{book.name}}</b></h2></li>
+            <li class="list-group-item">  <p>Book-Id: <b>{{book.bookId}}</b></p></li>
+            <li class="list-group-item"><p>Author-Name: <b>{{book.author}}</b></p></li>
+            <li class="list-group-item"><p>Department: <b>{{book.department}}</b></p></li>
+            <li class="list-group-item"><p class="display-6 ">Availability: <b>{{book.availability}}</b></p></li>
 
         </ul>
-        <button id="bookDetails2-button36" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-cart"> TakeBook</button>
-        <button ng-click="borrow(book.Id)" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-heart"> WishList </button>
+        <button  ng-click="borrow()" id="bookDetails2-button36" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-cart"> TakeBook</button>
+        <button id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-heart"> WishList </button>
         <button ui-sref="tabsController.studLibrary()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-close"> Cancel</button>
       </div>
           </ion-card-content>

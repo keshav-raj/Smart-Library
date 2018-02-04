@@ -9,10 +9,11 @@ angular.module('smartLibrary')
   $scope.addBook =function(bookDetails){
     console.log(bookDetails);
    Books.insert({
-      Name:bookDetails.name,
-      AuthorName:bookDetails.authorName,
-      Id:bookDetails.id,
-      Department:bookDetails.department,
+      name:bookDetails.name,
+      author:bookDetails.authorName,
+      bookId:bookDetails.id,
+      department:bookDetails.department,
+      availability:bookDetails.availability,
     })
   };
 

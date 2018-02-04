@@ -11,7 +11,7 @@
         </label>
         <label class="item item-input" id="addBooks-input5">
           <span class="input-label">Book id</span>
-          <input type="number" placeholder="" ng-model="bookDetails.id">
+          <input type="text" placeholder="" ng-model="bookDetails.id">
         </label>
         <label class="item item-input" id="addBooks-input7">
           <span class="input-label">Author</span>
@@ -20,6 +20,10 @@
         <label class="item item-input" id="addBooks-input6">
           <span class="input-label">Department</span>
           <input type="text" placeholder="" ng-model="bookDetails.department">
+        </label>
+        <label class="item item-input" id="addBooks-input6">
+          <span class="input-label"Availability</span>
+          <input type="number" placeholder="" ng-model="bookDetails.availability">
         </label>
       </form>
       <button id="addBooks-button9" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-android-add-circle" ng-click="addBook(bookDetails)"> Add Book</button>

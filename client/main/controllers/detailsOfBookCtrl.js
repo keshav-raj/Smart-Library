@@ -17,10 +17,10 @@ angular.module('smartLibrary')
     var bookDetails = Books.findOne({_id:$stateParams.bookId});
     console.log("Book details"+bookDetails.Name+bookDetails.Id+bookDetails.AuthorName+bookDetails.Department);
     var borrowBook = {
-      name:bookDetails.Name,
-      bookId:bookDetails.Id,
-      author:bookDetails.AuthorName,
-      department:bookDetails.Department,
+      name:bookDetails.name,
+      bookId:bookDetails.bookId,
+      author:bookDetails.author,
+      department:bookDetails.department,
       userId:userId,
       userName:userDetails.profile.name,
       rollNo:userDetails.profile.rollNo,
@@ -28,6 +28,7 @@ angular.module('smartLibrary')
     }
 
     BorrowedBooks.insert(borrowBook);
+    $state.go("tabsController.studLibrary")
 
 
       }

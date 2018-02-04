@@ -5,7 +5,8 @@ angular.module('smartLibrary')
   $scope.credentials = {};
   $scope.helpers({
   Books: function(){
-    return Books.find();
+    var myId = Meteor.userId();
+    return BorrowedBooks.find({approved:"true"});
   },
   checkUser: function(){
     //check wheather user is logged in

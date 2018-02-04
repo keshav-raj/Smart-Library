@@ -68,7 +68,7 @@ angular.module("smartLibrary")
           });
 
           $stateProvider.state('tabsController.myBookDetails', {
-                url: '/myBookDetails',
+                url: '/myBookDetails/:bookid',
                 views: {
                   'tab2': {
                     templateUrl: 'client/main/views/myBookDetails.ng.html',
@@ -78,7 +78,7 @@ angular.module("smartLibrary")
               });
 
           $stateProvider.state('tabsController.detailsOfBook', {
-                url: '/detailsOfBook/:bookId',
+                url: '/detailsOfBook/:bookid',
                 views: {
                   'tab1': {
                     templateUrl: 'client/main/views/detailsOfBook.ng.html',
