@@ -1,16 +1,16 @@
 <ion-view title="Returned Books" hide-nav-bar="false" id="page8">
   <ion-content padding="true" style="background: url(img/pT37MqxvQ4CY5ums81J0_coffee-2306471_1920.jpg) no-repeat center;background-size:cover;" class="has-header">
-    <div class="card card-inverse card-primary mb-3" >
-  <h3 class="card-header">{{Book.Name}}</h3>
+    <div class="card card-inverse card-primary mb-3" ng-repeat="Book in returnedBooks">
+  <h3 class="card-header">{{Book.name}}</h3>
   <div class="card-block">
      <div class="row">
        <div class="col-md-1 col-sm-1">
          <img height="200px" width="200px" class="img-thumbnail"  src="img/bookParticles.jpg">
        </div>
        <div class="col-md-11 col-sm-11">
-         <h4 class="card-title">BookId: <b>{{Book.Id}}</b></h4>
-    <p class="card-text">Author: <b>{{Book.AuthorName}}</b></p>
-    <a href="#" class="btn btn-primary  btn-lg" ui-sref="adminTabsController.bookDetailReturned()" >View Book</a>
+         <h4 class="card-title">BookId: <b>{{Book.book_id}}</b></h4>
+    <p class="card-text">Author: <b>{{Book.author}}</b></p>
+    <a ui-sref="adminTabsController.bookDetailReturned({bookid:Book._id})" class="btn btn-primary  btn-lg"  >View Book</a>
        </div>
      </div>
   </div>

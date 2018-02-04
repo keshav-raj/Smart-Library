@@ -8,9 +8,9 @@
          <img height="200px" width="200px" class="img-thumbnail"  src="img/bookParticles.jpg">
        </div>
        <div class="col-md-11 col-sm-11">
-         <h4 class="card-title">BookId: {{ Book.bookid }}</h4>
+         <h4 class="card-title">BookId: {{ Book.book_id }}</h4>
     <p class="card-text">Author: <b>{{Book.author}}</b></p>
-    <a href="#" class="btn btn-primary  btn-lg" ui-sref="adminTabsController.bookDetailBorrowed({bookId: Book._id})" >View Book</a>
+    <a href="#" class="btn btn-primary  btn-lg" ui-sref="adminTabsController.bookDetailBorrowed({bookid: Book._id})" >View Book</a>
        </div>
      </div>
   </div>

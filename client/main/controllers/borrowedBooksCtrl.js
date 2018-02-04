@@ -6,7 +6,7 @@ angular.module('smartLibrary')
   $scope.helpers({
   Books: function(){
     var myId = Meteor.userId();
-    return BorrowedBooks.find({approved:"true"});
+    return BorrowedBooks.find({"approved":true,"userId":myId,"active":true});
   },
   checkUser: function(){
     //check wheather user is logged in

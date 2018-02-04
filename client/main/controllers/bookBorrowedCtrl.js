@@ -4,7 +4,7 @@ angular.module('smartLibrary')
 
   $scope.credentials = {};
   $scope.helpers({
-    book: function(){
+    books: function(){
     return BorrowedBooks.findOne({_id:$stateParams.bookid});
 
  }
@@ -12,7 +12,18 @@ angular.module('smartLibrary')
 
     $scope.approve = function () {
       console.log("im here");
-    BorrowedBooks.update({"_id":$stateParams.bookid},{$set: {"approved":"true"}})
+    BorrowedBooks.update({"_id":$stateParams.bookid},{$set: {"approved":true}});
+
+    var updateBook = BorrowedBooks.findOne({"_id":$stateParams.bookid});
+    console.log("dbBookId"+updateBook.dbBookId);
+    var dbBook = Books.findOne({"_id":updateBook.dbBookId});
+    console.log("Book Availabilty"+dbBook.availability);
+    var newAvailability = dbBook.availability-1;
+    Books.update({"_id":updateBook.dbBookId},{
+      $set: {"availability":newAvailability}
+    });
       $state.go("adminTabsController.borrowingBooks");
     }
+
+
 });

@@ -167,7 +167,7 @@ angular.module("smartLibrary")
       })
 
       $stateProvider.state('adminTabsController.bookDetailBorrowed', {
-      url: '/bookBorrowed/:bookId',
+      url: '/bookBorrowed/:bookid',
       views: {
         'tab4': {
           templateUrl: 'client/main/views/bookBorrowed.ng.html',
@@ -177,7 +177,7 @@ angular.module("smartLibrary")
       })
 
       $stateProvider.state('adminTabsController.bookDetailReturned', {
-      url: '/page10',
+      url: '/page10/:bookid',
       views: {
         'tab3': {
           templateUrl: 'client/main/views/bookReturned.ng.html',

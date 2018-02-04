@@ -11,7 +11,7 @@ angular.module('smartLibrary')
    Books.insert({
       name:bookDetails.name,
       author:bookDetails.authorName,
-      bookId:bookDetails.id,
+      book_id:bookDetails.id,
       department:bookDetails.department,
       availability:bookDetails.availability,
     })

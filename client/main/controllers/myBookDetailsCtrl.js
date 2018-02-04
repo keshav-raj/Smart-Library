@@ -5,9 +5,15 @@ angular.module('smartLibrary')
   $scope.credentials = {};
   $scope.helpers({
     book: function(){
-    return BorrowedBooks.findOne({_id:$stateParams.bookid});
+      return BorrowedBooks.findOne({_id:$stateParams.bookid});
+            }
+       });
 
- }
- });
+       $scope.return = function () {
+         console.log("im here");
+         BorrowedBooks.update({"_id":$stateParams.bookid},{$set: {"return":true}});
+        $state.go("tabsController.borrowedBooks");
+      }
 
-});
+
+      });

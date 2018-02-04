@@ -7,7 +7,7 @@
     <div style="font-size:15px;">
       <ul class="list-group">
             <li class="list-group-item">  <h2><b>{{book.name}}</b></h2></li>
-            <li class="list-group-item">  <p>Book-Id: <b>{{book.bookId}}</b></p></li>
+            <li class="list-group-item">  <p>Book-Id: <b>{{book.book_id}}</b></p></li>
             <li class="list-group-item"><p>Expire on <b>20/2/18</b></p></li>
             <li class="list-group-item"><p>You have 18 days more</p></li>
 
@@ -16,7 +16,7 @@
           </ion-card-content>
         </ion-card>
 
-    <button id="bookDetails-button15" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-ios-book-outline"> Return</button>
+    <button ng-click="return()" id="bookDetails-button15" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-ios-book-outline"> Return</button>
     <a ui-sref="tabsController.borrowedBooks()" id="bookDetails-button17" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-ios-close"> Cancel</a>
     <button id="bookDetails-button16" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-android-add-circle"> Extend</button>
   </ion-content>

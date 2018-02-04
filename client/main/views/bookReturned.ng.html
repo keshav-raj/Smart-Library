@@ -6,14 +6,14 @@
     <div style="font-size:15px;">
       <ul class="list-group">
             <li class="list-group-item">  <h2><b>{{book.name}}</b></h2></li>
-            <li class="list-group-item">  <p>Book-Id: <b>{{book.bookid}}</b></p></li>
-            <li class="list-group-item"><p>User-Name: <b>{{book.author}</b></p></li>
-            <li class="list-group-item"><p>User-Id: <b>{{book.department}}</b></p></li>
+            <li class="list-group-item">  <p>Book-Id: <b>{{book.book_id}}</b></p></li>
+            <li class="list-group-item"><p>User-Name: <b>{{book.userName}}</b></p></li>
+            <li class="list-group-item"><p>User-Id: <b>{{book.userId}}</b></p></li>
             <li class="list-group-item"><p>Borrowed at: <b>date</b></p></li>
 
 
         </ul>
-        <button ng-click="borrow(book.Id)" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-android-done-all"> Approve </button>
+        <button ng-click="approve()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-android-done-all"> Approve </button>
         <button ui-sref="adminTabsController.returnedBooks()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-close"> Deny</button>
       </div>
           </ion-card-content>
