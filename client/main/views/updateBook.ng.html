@@ -7,19 +7,23 @@
       <form id="addBooks-form2" class="list">
         <label class="item item-input" id="addBooks-input3">
           <span class="input-label">Book Name</span>
-          <input type="text" placeholder="" ng-model="bookDetails.name">
+          <input type="text"  ng-model="book.name">
         </label>
         <label class="item item-input" id="addBooks-input5">
           <span class="input-label">Book id</span>
-          <input type="number" placeholder="" ng-model="bookDetails.id">
+          <input type="text"  ng-model="book.book_id">
         </label>
         <label class="item item-input" id="addBooks-input7">
           <span class="input-label">Author</span>
-          <input type="text" placeholder="" ng-model="bookDetails.authorName">
+          <input type="text"  ng-model="book.author">
         </label>
         <label class="item item-input" id="addBooks-input6">
           <span class="input-label">Department</span>
-          <input type="text" placeholder="" ng-model="bookDetails.department">
+          <input type="text"  ng-model="book.department">
+        </label>
+        <label class="item item-input" id="addBooks-input6">
+          <span class="input-label">Availability</span>
+          <input type="text"  ng-model="book.availability">
         </label>
       </form>
           <button id="updateBook-button14" style="border-radius:17px 17px 17px 17px" class="button button-positive button-block icon ion-android-upload"> Update</button>

@@ -30,11 +30,38 @@ angular.module("smartLibrary")
 
         $scope.openPost = function() {
             $scope.modal.show();
+            console.log("im here");
         };
         $scope.doLogoutAction = function() {
             alert("in doLogoutAction");
             $meteor.logout().then(function(_response) {
               $state.go('login');
             });
+        };
+
+        $scope.getPhoto = function(){
+
+            var options = {
+                quality: 50,
+                destinationType: Camera.DestinationType.DATA_URL,
+                sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+                allowEdit: false,
+                encodingType: Camera.EncodingType.JPEG,
+                targetWidth: 500,
+                targetHeight: 500,
+                popoverOptions: CameraPopoverOptions,
+                saveToPhotoAlbum: false,
+                correctOrientation:true
+            };
+
+            $cordovaCamera.getPicture(options).then(function(imageData) {
+                var image = document.getElementById('myImage');
+                image.src = "data:image/jpeg;base64," + imageData;
+                $scope.newPost.imageData=image.src;
+
+            }, function(err) {
+                // error
+            });
+
         };
     });

@@ -137,7 +137,7 @@ angular.module("smartLibrary")
       })
 
       $stateProvider.state('adminTabsController.updateBook', {
-      url: '/updateBook',
+      url: '/updateBook/:bookid',
       views: {
         'tab1': {
           templateUrl: 'client/main/views/updateBook.ng.html',

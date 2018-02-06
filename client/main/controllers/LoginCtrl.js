@@ -8,7 +8,11 @@ angular.module('smartLibrary')
 
     Meteor.loginWithPassword(emailVar, passwordVar, function(err){
           if(!err){
-            $state.go('tabsController.studLibrary');
+              if(Roles.userIsInRole( Meteor.userId(), 'Administrator' )){
+                $state.go('adminTabsController.adminLibrary');
+              }else{
+                $state.go('tabsController.studLibrary');
+              }
           } else{
             alert('Login failed please check the credentials');
           }
