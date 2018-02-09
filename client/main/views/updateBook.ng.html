@@ -1,7 +1,7 @@
 <ion-view title="Update book" hide-nav-bar="false" id="page6">
   <ion-content padding="true" style="background: url(img/oKI9vMo6RWJaRZhFaYUx_literature-3033196.jpg) no-repeat center;background-size:cover;" class="has-header">
     <ion-card>
-  <img class="img-thumbnail"  src="img/Teady.jpg">
+  <img height="500px" width="500px" class="img-thumbnail"  src="img/Teady.jpg">
   <ion-card-content>
     <div style="font-size:15px;">
       <form id="addBooks-form2" class="list">
@@ -26,8 +26,10 @@
           <input type="text"  ng-model="book.availability">
         </label>
       </form>
-          <button id="updateBook-button14" style="border-radius:17px 17px 17px 17px" class="button button-positive button-block icon ion-android-upload"> Update</button>
-        <button ui-sref="adminTabsController.adminLibrary()" id="bookDetails2-button34" style="border-radius:17px 17px 17px 17px;" class="button button-positive button-block icon ion-ios-close"> Cancel</button>
+
+          <button ng-click="updateBook(book)" type="button" id="updateBook-button14"  class="btn btn-primary btn-lg mb-3  icon ion-android-upload"> Update</button>
+        <button type="button" ui-sref="adminTabsController.adminLibrary()" id="bookDetails2-button34"  class="btn btn-primary btn-lg mb-3  icon ion-ios-close"> Cancel</button>
+
       </div>
           </ion-card-content>
         </ion-card>

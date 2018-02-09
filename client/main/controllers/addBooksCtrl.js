@@ -14,6 +14,8 @@ angular.module('smartLibrary')
       book_id:bookDetails.id,
       department:bookDetails.department,
       availability:bookDetails.availability,
+      createdAt: new Date(),
+
     })
   };
 

@@ -1,19 +1,25 @@
 <ion-view title="My Library" hide-nav-bar="false" id="page3">
   <ion-content padding="true"  class="manual-ios-statusbar-padding">
-    <div class="card card-inverse card-primary mb-3"  ng-repeat="Book in Books">
+    <div class="card" ng-repeat="Book in Books">
   <h3 class="card-header">{{Book.name}}</h3>
-  <div class="card-block">
+  <div class="card-block ">
      <div class="row">
-       <div class="col-md-1 col-sm-1">
-         <img height="200px" width="200px" class="img-thumbnail"  src="img/bookParticles.jpg">
+       <div class="col-3" style="float:right">
+         <img  class="img-thumbnail mt-2"  src="img/bookParticles.jpg">
        </div>
-       <div class="col-md-11 col-sm-11">
-         <h4 class="card-title">BookId: {{ Book.book_id }}</h4>
-    <p class="card-text">Author: <b>{{Book.author}}</b></p>
-    <a href="#" class="btn btn-primary  btn-lg" ui-sref="tabsController.myBookDetails({bookid: Book._id})" >View Book</a>
-       </div>
+       <div class="col-9">
+        <div class="row">
+          <div class="col-9">
+            <h4 class="card-title">BookId: <b>{{Book.book_id}}</b></h4>
+             <h5 class="card-text">Author: <b>{{Book.author}}</b></h5>
+        </div>
+          <div class="col-3">
+            <a href="#" class="btn btn-primary  btn-lg" ui-sref="tabsController.myBookDetails({bookid: Book._id})" >View Book</a>
+          </div>
+          </div>
+        </div>
      </div>
   </div>
-</div>
+  </div>
   </ion-content>
 </ion-view>

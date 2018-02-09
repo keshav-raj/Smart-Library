@@ -13,19 +13,28 @@ angular.module('smartLibrary')
         console.log("working");
 
          BorrowedBooks.update({"_id":$stateParams.bookid},{$set: {"return":false,active:"false"}});
+
         var updateBook = BorrowedBooks.findOne({"_id":$stateParams.bookid});
-        console.log("dbBookId"+updateBook.dbBookId);
+      //  console.log("dbBookId"+updateBook.dbBookId);
         var dbBook = Books.findOne({"_id":updateBook.dbBookId});
-        console.log("Book Availabilty"+dbBook.availability);
+      //  console.log("Book Availabilty"+dbBook.availability);
         var newAvailability = dbBook.availability+1;
-        Books.update({"_id":updateBook.dbBookId},{
-          $set: {"availability":newAvailability}
+            Books.update({"_id":updateBook.dbBookId},{
+                $set: {"availability":newAvailability}
 
         })
-          $state.go("adminTabsController.returnedBooks")
+          var wish =  WishList.findOne({"dbBookId":updateBook.dbBookId});
 
-      }
+              if (wish) {
 
+                        WishList.update({_id:wish._id},
+                          {
+                           $set: {"bookAvailable":true}
+                         })
+                      $state.go("adminTabsController.returnedBooks");
+
+                      }
+              }
 
 
 

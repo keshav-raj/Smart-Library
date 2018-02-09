@@ -1,23 +1,25 @@
 <ion-view title="Book Details" hide-nav-bar="false" id="page12">
-  <ion-content padding="true" style="background: url(img/bookItems.jpg) no-repeat center;background-size:cover;" class="manual-ios-statusbar-padding">
+  <ion-content padding="true"  class="manual-ios-statusbar-padding">
 
     <ion-card>
-  <img class="img-thumbnail"  src="img/Teady.jpg">
+  <img height="500px" width="500px" class="img-thumbnail"  src="img/Teady.jpg">
   <ion-card-content>
     <div style="font-size:15px;">
       <ul class="list-group">
             <li class="list-group-item">  <h2><b>{{book.name}}</b></h2></li>
             <li class="list-group-item">  <p>Book-Id: <b>{{book.book_id}}</b></p></li>
-            <li class="list-group-item"><p>Expire on <b>20/2/18</b></p></li>
+            <li class="list-group-item"><p>Expire on <b>{{book.dueDateIs | date:'medium'}}</b></p></li>
             <li class="list-group-item"><p>You have 18 days more</p></li>
 
         </ul>
       </div>
           </ion-card-content>
         </ion-card>
+    <div class="btn-group button-block">
+      <button ng-click="return()" id="bookDetails-button15" class="button button-positive  icon ion-ios-book-outline m-2"> Return</button>
+      <a ui-sref="tabsController.borrowedBooks()" id="bookDetails-button17" class="button button-positive  icon ion-ios-close m-2"> Cancel</a>
+      <button id="bookDetails-button16" class="button button-positive  icon ion-android-add-circle m-2"> Extend</button>
 
-    <button ng-click="return()" id="bookDetails-button15" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-ios-book-outline"> Return</button>
-    <a ui-sref="tabsController.borrowedBooks()" id="bookDetails-button17" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-ios-close"> Cancel</a>
-    <button id="bookDetails-button16" style="border-radius:20px 20px 20px 20px;" class="button button-positive button-block icon ion-android-add-circle"> Extend</button>
-  </ion-content>
+    </div>
+    </ion-content>
 </ion-view>

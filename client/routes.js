@@ -25,6 +25,13 @@ angular.module("smartLibrary")
                 controller: 'firstPageCtrl'
             });
 
+        $stateProvider.state('wishList', {
+                url: '/wishList',
+                templateUrl: 'client/main/views/wishList.ng.html',
+                controller: 'wishListCtrl'
+            });
+
+
         $stateProvider.state('signup', {
                 url: '/signup',
                 templateUrl: 'client/main/views/signup.ng.html',

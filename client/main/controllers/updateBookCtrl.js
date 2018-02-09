@@ -10,4 +10,20 @@ angular.module('smartLibrary')
  }
  });
 
+
+ $scope.updateBook =function(book){
+console.log("im working");
+       Books.update({_id:$stateParams.bookid},
+       {
+         $set: {
+           name:book.name,
+           author:book.author,
+           book_id:book.book_id,
+           department:book.department,
+           availability:book.availability,
+         }
+       })
+
+     }
+
 });
